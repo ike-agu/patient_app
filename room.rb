@@ -11,8 +11,12 @@ class Room
   end
 
   def add_patient(patient)
-    @patients << patient
+    if full?
+
+    else
+      @patients << patient
     patient.room = self
+    end
   end
 end
 
@@ -27,3 +31,6 @@ Melanie = Patient.new(name: 'Melanie Ekani', age: 32)
 room1.add_patient(Melanie)
 p room1
 p Melanie.room
+
+Ikenna = Patient.new(name: 'Ikenna franklin', age: 34)
+room1.add_patient(Ikenna)
