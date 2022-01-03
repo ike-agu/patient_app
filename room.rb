@@ -2,6 +2,7 @@ require_relative 'patient'
 
 class Room
   class CapacityReachedError < Exception; end
+  attr_accessor :id
 
   def initialize(attributes = {})
     @capacity = attributes[:capacity]

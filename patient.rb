@@ -1,6 +1,6 @@
 class Patient
   attr_reader :name, :cured, :age
-  attr_accessor :room
+  attr_accessor :room, :id
 
   def initialize(attributes = {})
     @name = attributes[:name]
