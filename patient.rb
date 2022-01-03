@@ -3,6 +3,7 @@ class Patient
   attr_accessor :room, :id
 
   def initialize(attributes = {})
+    @id = attributes[:id]
     @name = attributes[:name]
     @age = attributes[:age]
     @cured = attributes[:cured] || false
@@ -14,7 +15,7 @@ class Patient
   end
 end
 
-ikenna = Patient.new({ name: 'ikenna', cured: false })
+ikenna = Patient.new({ name: 'ikenna', cured: true })
 gozie = Patient.new({ name: 'Iyke strike', cured: false, blood_type: 'A' })
 p ikenna
 p gozie
